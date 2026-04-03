@@ -5,24 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jian Wang - Página Personal</title>
 
-  <!-- Link al CSS -->
-  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Jian Wang</h1>
-    <p>Desarrollador Web | Estudiante</p>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Página Personal</p>
+      <h1>Jian Wang</h1>
+      <p class="subtitle">Desarrollador Web · Estudiante de Licenciatura en Tecnología e Información</p>
+    </div>
   </header>
 
-  <!-- Main -->
-  <main>
-    <h2>Mi Infografía Personal</h2>
-    <img src="./assets/images/infografia.png" alt="Infografía de Jian">
+  <main class="container">
+    <section class="profile-card">
+      <h2>Mi Infografía Personal</h2>
+      <p class="section-text">
+        En esta página presento una breve introducción sobre mi perfil, mis intereses y mi formación académica.
+        El objetivo es mostrar de forma visual quién soy y cuáles son las áreas de tecnología que más me interesan.
+      </p>
+
+      <div class="image-frame">
+        <img src="./assets/images/infografia.png" alt="Infografía de Jian Wang">
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-box">
+        <h3>Sobre mí</h3>
+        <p>
+          Me interesa el desarrollo web, el diseño de interfaces y la creación de experiencias digitales claras,
+          modernas y fáciles de usar.
+        </p>
+      </article>
+
+      <article class="info-box">
+        <h3>Habilidades</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Diseño web responsivo</li>
+        </ul>
+      </article>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>Licenciatura en Tecnología e Información - UADE</p>
     <p>2026</p>
