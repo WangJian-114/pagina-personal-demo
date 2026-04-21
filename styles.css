@@ -241,3 +241,66 @@ footer p {
     padding: 22px;
   }
 }
+
+/* ===== NAV ===== */
+.nav {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: background 0.25s ease;
+}
+
+.nav a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ===== EXTRA SECTION ===== */
+.extra-section {
+  display: grid;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.info-box.full {
+  width: 100%;
+}
+
+/* ===== SMALL HERO ===== */
+.small-hero {
+  padding: 60px 20px 70px;
+}
+
+/* ===== CONTACT BOX ===== */
+.contact-box {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #f4f9ff;
+  border: 1px solid #dceafb;
+  text-align: center;
+}
+
+.contact-box p {
+  margin-bottom: 8px;
+  color: #526273;
+}
+
+.contact-box a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1f5e9f;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
