@@ -58,7 +58,7 @@ body {
 /* ===== TOP NAV ===== */
 .top-nav {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   width: min(1100px, calc(100% - 32px));
   margin: 0 auto 58px;
   display: flex;
@@ -92,6 +92,33 @@ body {
 .nav-links a:hover {
   background: rgba(255,255,255,0.16);
   transform: translateY(-1px);
+}
+
+/* ===== HAMBURGER ===== */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.08);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: white;
+  border-radius: 999px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* ===== HERO CONTENT ===== */
@@ -303,13 +330,51 @@ footer p {
     font-size: 18px;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
   .nav-links {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    width: 210px;
+    padding: 14px;
+    border-radius: 18px;
+    background: rgba(22, 50, 79, 0.96);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+    flex-direction: column;
     gap: 8px;
+
+    opacity: 0;
+    transform: translateY(-12px);
+    pointer-events: none;
   }
 
   .nav-links a {
+    display: block;
+    text-align: left;
     font-size: 14px;
-    padding: 7px 12px;
+    padding: 10px 14px;
+  }
+
+  .menu-toggle:checked ~ .nav-links {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .hero h1 {
@@ -349,7 +414,7 @@ footer p {
 
 @media (max-width: 480px) {
   .top-nav {
-    flex-direction: column;
+    flex-direction: row;
     gap: 14px;
   }
 
@@ -363,5 +428,11 @@ footer p {
 
   .profile-card {
     padding: 20px;
+  }
+
+  .nav-links {
+    width: 100%;
+    left: 0;
+    right: 0;
   }
 }
